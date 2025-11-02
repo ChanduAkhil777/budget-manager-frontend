@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ChanduAkhil777/budget-manager-frontend/static/css/main.534ada04.css",
+    "main.js": "/ChanduAkhil777/budget-manager-frontend/static/js/main.446833a3.js",
+    "static/js/453.0b28869b.chunk.js": "/ChanduAkhil777/budget-manager-frontend/static/js/453.0b28869b.chunk.js",
+    "static/media/budget-background.jpg": "/ChanduAkhil777/budget-manager-frontend/static/media/budget-background.e4d1a67e088ab9f5cdc4.jpg",
+    "index.html": "/ChanduAkhil777/budget-manager-frontend/index.html",
+    "main.534ada04.css.map": "/ChanduAkhil777/budget-manager-frontend/static/css/main.534ada04.css.map",
+    "main.446833a3.js.map": "/ChanduAkhil777/budget-manager-frontend/static/js/main.446833a3.js.map",
+    "453.0b28869b.chunk.js.map": "/ChanduAkhil777/budget-manager-frontend/static/js/453.0b28869b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.534ada04.css",
+    "static/js/main.446833a3.js"
+  ]
+}
