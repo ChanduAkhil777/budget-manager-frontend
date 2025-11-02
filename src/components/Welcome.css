@@ -1,0 +1,46 @@
+.welcome-container {
+  /* The background properties (image, size, position) 
+    have been MOVED to the Welcome.js file.
+  */
+  
+  /* --- These rules center the content --- */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.welcome-content {
+  /* This adds a semi-transparent box behind your text */
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 40px 60px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-content h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.welcome-content p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.start-btn {
+  background-color: #12fd1a;
+  color: rgb(239, 237, 237);
+  padding: 15px 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-btn:hover {
+  background-color: #45a049;
+}

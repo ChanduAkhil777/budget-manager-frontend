@@ -1,0 +1,290 @@
+.profile-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f4f7fa;
+  min-height: calc(100vh - 80px);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: #333; /* Ensure text color isn't transparent or matching background */
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.profile-header h1 {
+  color: #2c3e50;
+  font-weight: 300;
+  margin: 0;
+}
+
+.profile-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.profile-card h2 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.password-change-section {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  border-top: 1px dashed #e0e0e0;
+}
+
+.password-change-section h3 {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.password-change-section p {
+  color: #777;
+  font-style: italic;
+}
+
+/* Button styles (ensure they are defined) */
+.btn {
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+  margin-right: 10px;
+}
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.btn-logout-profile {
+  background-color: #dc3545;
+  color: white;
+}
+.btn-logout-profile:hover {
+  background-color: #c82333;
+}
+/* --- UserProfile.css additions --- */
+
+/* Re-use form group and input styles (adjust if needed) */
+.profile-card .form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.profile-card .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #555;
+}
+
+.profile-card .form-group input {
+  width: 100%;
+  padding: 10px; /* Slightly smaller padding */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: #333;
+}
+
+.profile-card .form-group input:focus {
+   outline: none;
+   border-color: #007bff;
+   box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+   
+}
+
+/* Button styles (add primary if not already there) */
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Form Message Styles */
+.form-message {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.error-message { /* Specific style for errors */
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.success-message { /* Specific style for success */
+   background-color: #d4edda;
+   color: #155724;
+   border: 1px solid #c3e6cb;
+}
+
+.back-link {
+    margin-top: 20px; /* Add space above back button */
+}
+/* --- UserProfile.css additions --- */
+
+/* Profile Photo Section */
+.profile-photo-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Make it circular */
+  object-fit: cover; /* Ensure image covers the area nicely */
+  border: 4px solid #eee;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: block; /* Center the image */
+  margin: 0 auto 15px auto; /* Center with space below */
+}
+
+.change-photo-btn,
+.upload-photo-btn {
+  margin-left: 10px;
+  vertical-align: middle; /* Align buttons nicely if they wrap */
+}
+
+/* Adjust button sizes if needed */
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 0.9rem;
+}
+
+/* Message Styles (including info) */
+.form-message {
+  padding: 10px;
+  margin-top: 15px; /* Add space above message in photo section */
+  margin-bottom: 15px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 500;
+}
+.error-message {
+  background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb;
+}
+.success-message {
+  background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;
+}
+.info-message { /* Style for 'Uploading...' message */
+  background-color: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb;
+}
+
+/* Ensure password section has enough space */
+.password-change-section {
+  margin-top: 40px; /* Increased space */
+  /* ... rest of password section styles ... */
+}
+/* --- UserProfile.css additions --- */
+
+/* Loading Message */
+.loading-message {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 1.5em;
+  color: #555;
+}
+
+/* Profile Details Section */
+.profile-details {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #e0e0e0;
+}
+
+.profile-details h2 {
+    margin-bottom: 20px; /* More space after name */
+}
+
+.profile-details p {
+  margin: 8px 0;
+  font-size: 1.1em;
+  color: #444;
+}
+
+.profile-details p strong {
+  display: inline-block;
+  width: 100px; /* Align labels */
+  color: #666;
+}
+
+/* Adjust password section margin */
+.password-change-section {
+  margin-top: 20px;
+}
+/* --- UserProfile.css additions for Edit Mode --- */
+
+/* Wrapper for photo and details */
+.profile-main-content {
+    display: flex;
+    gap: 30px; /* Space between photo and details */
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.profile-photo-section {
+    flex-shrink: 0; /* Prevent photo section from shrinking */
+    margin-bottom: 0; /* Remove bottom margin when inside flex */
+}
+
+.profile-details-section {
+    flex-grow: 1; /* Allow details section to take remaining space */
+}
+
+/* Edit Button */
+.display-mode .edit-btn {
+    margin-top: 20px;
+}
+
+/* Edit Mode Form Specifics */
+.edit-mode h2 {
+    margin-bottom: 20px;
+}
+
+.edit-actions {
+    margin-top: 25px;
+    display: flex;
+    gap: 10px; /* Space between save/cancel buttons */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .profile-main-content {
+        flex-direction: column; /* Stack photo and details vertically */
+        align-items: center; /* Center items when stacked */
+    }
+    .profile-photo-section {
+        margin-bottom: 20px; /* Add space below photo when stacked */
+    }
+}

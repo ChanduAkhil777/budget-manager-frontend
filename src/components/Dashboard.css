@@ -1,0 +1,301 @@
+/* --- Global Dashboard Styling --- */
+.dashboard-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f4f7fa; /* Light grey background */
+  min-height: 100vh;
+  position: relative; /* Needed for logout button positioning */
+}
+
+.dashboard-header {
+  text-align: center;
+  color: #2c3e50; /* Dark blue-grey text */
+  margin-bottom: 30px;
+  font-weight: 300;
+  font-size: 2.5rem;
+  margin-top: 40px; /* <-- ADDED MARGIN FOR LOGOUT BUTTON */
+}
+
+/* --- Reusable Card Style --- */
+.card {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+/* --- Totals / Stats Bar --- */
+.totals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.totals-card {
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.totals-card h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.totals-card p {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.totals-card.budget { background-color: #e0f7fa; color: #00796b; }
+.totals-card.spent { background-color: #ffebee; color: #c62828; }
+.totals-card.remaining { background-color: #e8f5e9; color: #2e7d32; }
+
+
+/* --- Forms Grid --- */
+.forms-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-card h2 {
+  margin-top: 0;
+  color: #333;
+  font-weight: 600;
+}
+
+/* --- Modern Form Inputs & Buttons --- */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box; /* Important! */
+  transition: border-color 0.2s, box-shadow 0.2s;
+  color: #333;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+.btn {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  width: 100%; /* Default to full-width for form buttons */
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  width: auto; /* Override full-width */
+}
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* --- Charts Grid --- */
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.chart-card p {
+  text-align: center;
+  padding-top: 50px;
+  color: #777;
+  font-size: 1.1rem;
+}
+
+/* --- Expense List --- */
+.expense-list {
+  margin-top: 20px;
+}
+
+.expense-list h2 {
+  color: #333;
+  font-weight: 600;
+}
+
+.expense-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.expense-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+  margin-bottom: 10px;
+  transition: box-shadow 0.2s;
+}
+
+.expense-list li:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+}
+
+.expense-info strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.expense-info span {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.expense-actions .amount {
+  margin-right: 20px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+/* --- Responsive for Mobile --- */
+@media (max-width: 768px) {
+  .forms-grid,
+  .charts-grid,
+  .totals-grid {
+    grid-template-columns: 1fr; /* Stack everything vertically */
+  }
+
+  .dashboard-header {
+    font-size: 2rem;
+  }
+}
+
+/* --- NEW: Logout Button --- */
+.btn-logout {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  
+  background-color: #6c757d; /* Grey color */
+  color: white;
+  width: auto; /* Override full-width */
+  padding: 10px 18px;
+  z-index: 10;
+}
+
+.btn-logout:hover {
+  background-color: #5a6268;
+}
+/* --- Expense Table --- */
+.expense-table-card {
+  margin-top: 20px;
+}
+
+.expense-table-card h2 {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.expense-table {
+  width: 100%;
+  border-collapse: collapse; /* Remove gaps between cells */
+  margin-top: 15px;
+}
+
+.expense-table th,
+.expense-table td {
+  border: 1px solid #e0e0e0; /* Light grey borders */
+  padding: 12px 15px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.expense-table th {
+  background-color: #f8f9fa; /* Very light grey header */
+  font-weight: 600;
+  color: #495057;
+}
+
+/* Style for sortable headers */
+.expense-table th .cursor-pointer {
+  cursor: pointer;
+  user-select: none; /* Prevent text selection on click */
+}
+
+.expense-table tbody tr:nth-of-type(even) {
+  background-color: #f8f9fa; /* Zebra striping */
+}
+
+.expense-table tbody tr:hover {
+  background-color: #e9ecef; /* Hover effect */
+}
+
+/* Smaller delete button in table */
+.btn-sm {
+  padding: 4px 8px;
+  font-size: 0.8rem;
+}
+
+/* Remove old list styles */
+.expense-list { display: none; }
+/* --- Dashboard.css additions for interactive chart filter --- */
+
+.expense-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px; /* Adjust as needed */
+}
+
+.expense-table-header h2 {
+  margin: 0; /* Remove default margin from h2 */
+}
+
+.clear-filter-btn {
+  /* Add specific styles if needed, btn-secondary btn-sm already applied */
+  margin-left: 15px; /* Add some space */
+}
+
+/* Ensure chart canvas is clickable */
+.chart-card canvas {
+    cursor: pointer;
+}

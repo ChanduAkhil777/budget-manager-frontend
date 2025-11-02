@@ -1,0 +1,180 @@
+/* --- Login Container (Full background and centering) --- */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Use min-height for robustness */
+  width: 100vw;
+  
+  /* Background image applied via inline style in Login.js */
+  
+  /* Apply a blurred overlay on the background */
+  position: relative;
+}
+
+.login-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+  backdrop-filter: blur(8px); /* Blur the background image */
+  -webkit-backdrop-filter: blur(8px); /* Safari support */
+  z-index: 1; /* Make sure the overlay is behind the content box */
+}
+
+/* --- Login Box (The "Frosted Glass" card) --- */
+.login-box {
+  background: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle light border */
+  border-radius: 16px; /* Rounded corners */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); /* Soft, prominent shadow */
+  
+  padding: 40px;
+  width: 100%;
+  max-width: 420px; /* Slightly wider */
+  text-align: center;
+  color: white; /* White text for contrast */
+  z-index: 2; /* Make sure box is above the overlay */
+
+  /* Fade-in animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out 0.3s forwards;
+}
+
+/* --- Typography --- */
+.login-box h2 {
+  font-size: 2.5rem; /* Larger, more welcoming title */
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: white; /* Ensure text is white */
+}
+
+.login-box p {
+  font-size: 1.1em;
+  font-weight: 300;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.8); /* Slightly less opaque for subtext */
+}
+
+/* --- Form Styling --- */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9); /* Clear label text */
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px; /* More generous padding */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+  border-radius: 8px; /* More rounded inputs */
+  background: rgba(255, 255, 255, 0.1); /* Transparent input background */
+  color: white; /* Input text color */
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.6); /* Lighter placeholder text */
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2); /* Subtle focus glow */
+  background: rgba(255, 255, 255, 0.2); /* Slightly less transparent on focus */
+}
+
+/* --- Login Button (Re-using Welcome button style) --- */
+.login-btn {
+  /* Green gradient button */
+  background-image: linear-gradient(to right, #1D976C 0%, #93F9B9  51%, #1D976C  100%);
+  background-size: 200% auto; 
+  
+  color: white;
+  padding: 15px 35px;
+  font-size: 1.2em;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px; 
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px 0 rgba(45, 206, 137, 0.4);
+  width: 100%; /* Make button full width */
+  margin-top: 15px;
+}
+
+.login-btn:hover {
+  background-position: right center; 
+  transform: scale(1.02); /* Slightly smaller pop for form button */
+  box-shadow: 0 6px 20px 0 rgba(45, 206, 137, 0.6);
+}
+
+/* --- Optional: Forgot password / Register link --- */
+.forgot-password {
+  margin-top: 25px;
+  font-size: 0.95em;
+}
+
+.forgot-password a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* --- Re-using Fade-in Animation from Welcome page --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Error Message Styling --- */
+.error-message {
+  background-color: #ffebee; /* Light red background */
+  color: #c62828; /* Dark red text */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #c62828;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+/* --- Adjustments specifically for the Register Box --- */
+.register-box {
+  max-width: 480px; /* Make the box slightly wider */
+  padding: 35px 45px; /* Adjust padding if needed */
+}
+
+/* Reduce bottom margin on form groups for tighter spacing if needed */
+.register-box .form-group {
+  margin-bottom: 18px; 
+}
+
+/* Ensure paragraph below form has enough space */
+.register-box .forgot-password {
+  margin-top: 20px;
+}
